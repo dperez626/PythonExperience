@@ -46,3 +46,46 @@ describe_pet('hamster', 'coheed')
 describe_pet('dog', 'cambria')
 
 #Order Matters in Positional Arguments
+#Default Values
+def describe_pet(pet_name, animal_type='dog'):
+    """Display information about a pet."""
+    print(f"\nI have a {animal_type}.")
+    print(f"My {animal_type}'s name is {pet_name.title()}.")
+
+describe_pet(pet_name='willie')
+
+#8-3 T-Shirt (Positional argument)
+def make_shirt(size, text):
+    print(f"\nI have a {size} shirt that says {text} on it!")
+
+make_shirt('large', 'cool breeze')
+
+#8-3 T-Shirt (Keyword Argument)
+def make_shirt(size, text):
+    print(f"\nI have a {size} shirt that says {text} on it!")
+
+make_shirt(size='large', text='cool mist')
+
+def make_shirt(size, text):
+    print(f"\nI have a {size} shirt that says {text} on it!")
+
+make_shirt(text='cool wind', size='large')
+
+#8-4 Large Shirt
+def make_shirt(text='I love python', size='large'):
+    print(f"\nI have a {size} shirt that says {text} on it!")
+
+make_shirt(text='deep water')
+
+def make_shirt(text='I love python', size='large'):
+    print(f"\nI have a {size} shirt that says {text} on it!")
+
+make_shirt(size='small')
+
+#8-5 Cities
+def describe_city(city_name, country='Peru'):
+    print(f"\n{city_name.title()} is in {country.title()}.")
+
+describe_city('lima')
+describe_city('huaraz')
+describe_city('ambato', country='ecuador')
